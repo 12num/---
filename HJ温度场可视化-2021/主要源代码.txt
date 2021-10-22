@@ -1,0 +1,514 @@
+1.界面显示程序
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'UI_MainWindow.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
+import datetime,sys
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_Form(QtGui.QWidget):
+    def setupUi(self, Form):
+        Form.setObjectName(_fromUtf8("Form"))
+        Form.resize(747, 513)
+        self.verticalLayout = QtGui.QVBoxLayout(Form)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.label = QtGui.QLabel(Form)
+        self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout.addWidget(self.label)
+        self.start_dateTimeEdit = QtGui.QDateTimeEdit(Form)
+        self.start_dateTimeEdit.setObjectName(_fromUtf8("start_dateTimeEdit"))
+        #初始化起始时刻的时间值
+        self.start_dateTimeEdit.setDateTime(datetime.datetime.now())
+        self.horizontalLayout.addWidget(self.start_dateTimeEdit)
+        self.label_2 = QtGui.QLabel(Form)
+        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.horizontalLayout.addWidget(self.label_2)
+        self.end_dateTimeEdit = QtGui.QDateTimeEdit(Form)
+        self.end_dateTimeEdit.setObjectName(_fromUtf8("end_dateTimeEdit"))
+        self.end_dateTimeEdit.setDateTime(datetime.datetime.now())
+        self.horizontalLayout.addWidget(self.end_dateTimeEdit)
+        self.label_3 = QtGui.QLabel(Form)
+        self.label_3.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.horizontalLayout.addWidget(self.label_3)
+        self.spinBox = QtGui.QSpinBox(Form)
+        self.spinBox.setObjectName(_fromUtf8("spinBox"))
+        self.horizontalLayout.addWidget(self.spinBox)
+        self.start_pushButton = QtGui.QPushButton(Form)
+        self.start_pushButton.setObjectName(_fromUtf8("start_pushButton"))
+        self.horizontalLayout.addWidget(self.start_pushButton)
+        self.reset_pushButton = QtGui.QPushButton(Form)
+        self.reset_pushButton.setObjectName(_fromUtf8("reset_pushButton"))
+        self.horizontalLayout.addWidget(self.reset_pushButton)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.verticalLayout.addLayout(self.verticalLayout_2)
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.big_pushButton_1 = QtGui.QPushButton(Form)
+        self.big_pushButton_1.setObjectName(_fromUtf8("big_pushButton_1"))
+        self.horizontalLayout_2.addWidget(self.big_pushButton_1)
+        self.big_pushButton_2 = QtGui.QPushButton(Form)
+        self.big_pushButton_2.setObjectName(_fromUtf8("big_pushButton_2"))
+        self.horizontalLayout_2.addWidget(self.big_pushButton_2)
+        self.big_pushButton_3 = QtGui.QPushButton(Form)
+        self.big_pushButton_3.setObjectName(_fromUtf8("big_pushButton_3"))
+        self.horizontalLayout_2.addWidget(self.big_pushButton_3)
+        self.small_pushButton_1 = QtGui.QPushButton(Form)
+        self.small_pushButton_1.setObjectName(_fromUtf8("small_pushButton_1"))
+        self.horizontalLayout_2.addWidget(self.small_pushButton_1)
+        self.small_pushButton_2 = QtGui.QPushButton(Form)
+        self.small_pushButton_2.setObjectName(_fromUtf8("small_pushButton_2"))
+        self.horizontalLayout_2.addWidget(self.small_pushButton_2)
+        self.small_pushButton_3 = QtGui.QPushButton(Form)
+        self.small_pushButton_3.setObjectName(_fromUtf8("small_pushButton_3"))
+        self.horizontalLayout_2.addWidget(self.small_pushButton_3)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+        Form.setTabOrder(self.start_dateTimeEdit, self.end_dateTimeEdit)
+        Form.setTabOrder(self.end_dateTimeEdit, self.spinBox)
+        Form.setTabOrder(self.spinBox, self.start_pushButton)
+        Form.setTabOrder(self.start_pushButton, self.reset_pushButton)
+        Form.setTabOrder(self.reset_pushButton, self.big_pushButton_1)
+        Form.setTabOrder(self.big_pushButton_1, self.big_pushButton_2)
+        Form.setTabOrder(self.big_pushButton_2, self.big_pushButton_3)
+        Form.setTabOrder(self.big_pushButton_3, self.small_pushButton_1)
+        Form.setTabOrder(self.small_pushButton_1, self.small_pushButton_2)
+        Form.setTabOrder(self.small_pushButton_2, self.small_pushButton_3)
+    def retranslateUi(self, Form):
+        Form.setWindowTitle(_translate("Form", "Form", None))
+        self.label.setText(_translate("Form", "起始时刻：", None))
+        self.label_2.setText(_translate("Form", "终止时刻：", None))
+        self.label_3.setText(_translate("Form", "采集周期：", None))
+        self.start_pushButton.setText(_translate("Form", "开始", None))
+        self.reset_pushButton.setText(_translate("Form", "重置", None))
+        self.big_pushButton_1.setText(_translate("Form", "大库1", None))
+        self.big_pushButton_2.setText(_translate("Form", "大库2", None))
+        self.big_pushButton_3.setText(_translate("Form", "大库3", None))
+        self.small_pushButton_1.setText(_translate("Form", "小库1", None))
+        self.small_pushButton_2.setText(_translate("Form", "小库2", None))
+        self.small_pushButton_3.setText(_translate("Form", "小库3", None))
+2.处理逻辑
+#__author__ = 'qianqiangV'
+#coding:utf-8
+import UI_MainWindow
+import mplCanvasWrapper
+import datetime,sys,create_xls
+from Serial_Communication import Serial_Comm
+from PyQt4 import QtGui,QtCore
+from matplotlib.backends.backend_qt4agg import NavigationToolbar2QTAgg as NavigationToolbar
+#import NavigationToolbar2QTAgg as NavigationToolbar
+"""界面处理逻辑程序"""
+class Code_MainWindow(UI_MainWindow.Ui_Form):
+	def __init__(self,parent=None):
+		super(Code_MainWindow,self).__init__(parent)
+		self.setupUi(self)
+		#将图表插入进去
+		self.sc=mplCanvasWrapper.MyMplCanvas(self,width=7.2,height=4,dpi=100)
+		self.NavigationToolbar=NavigationToolbar(self.sc,self)
+		self.verticalLayout_2.addWidget(self.sc)
+		self.verticalLayout_2.addWidget(self.NavigationToolbar)
+		self.setWindowTitle(u'实时温度监控程序')
+		self.setFixedSize(750,520)
+		#定义获取硬件数据的对象
+		self.get_plot_data=Serial_Comm()
+		#定义存储excel数据对象
+		self.create_xls=create_xls.Create_Xls()
+		#大库温度数据
+		self.big_data=[]
+		#定义按钮事件（主要实现判断，采集，绘图）
+		self.start_pushButton.clicked.connect(self.start)
+		#定义重置事件(结束当前的循环)
+		self.reset_pushButton.clicked.connect(self.reset)
+		#大库1
+		self.big_pushButton_1.clicked.connect(lambda :self.choose_plot())
+		#大库2
+		self.big_pushButton_2.clicked.connect(lambda :self.choose_plot(2))
+		#大库3
+		self.big_pushButton_3.clicked.connect(lambda :self.choose_plot(3))
+		#小库1
+		self.small_pushButton_1.clicked.connect(lambda :self.choose_plot(4))
+		#小库2
+		self.small_pushButton_2.clicked.connect(lambda :self.choose_plot(5))
+		#小库3
+		self.small_pushButton_3.clicked.connect(lambda :self.choose_plot(6))
+		#设置周期定时器
+		self.period_timer=QtCore.QTimer()
+		#设置开始定时器
+		self.start_timer=QtCore.QTimer()
+		#周期次数计数器
+		self.task_times=1
+	def start(self):
+		#判断，设置定时器，采集，循环，绘图
+		#获取起始、结束和周期的值
+		#判断设置的时间是否正确，要求起始时间和结束时间的时间间隔要在1分钟以上
+		start_time=self.start_dateTimeEdit.dateTime()
+		end_time=self.end_dateTimeEdit.dateTime()
+		#判断当前设置时间如果小于当前的系统时间则将时间初始化当前系统时间
+		if start_time<datetime.datetime.now():
+			self.start_dateTimeEdit.setDateTime(QtCore.QDateTime.currentDateTime().addSecs(1))
+			start_time=self.start_dateTimeEdit.dateTime()
+		if end_time<datetime.datetime.now():
+			self.end_dateTimeEdit.setDateTime(QtCore.QDateTime.currentDateTime().addSecs(1))
+			end_time=self.end_dateTimeEdit.dateTime()
+		#判断结束时间是否大于等于开始时间，如果不是，则提示对话框
+		if end_time<start_time:
+			message=QtGui.QMessageBox(text=u"您出入的结束时间小于您的起始时间，请重新输入！",parent=self)
+			message.show()
+			#将编辑框的时间初始化当前的系统时间
+			self.start_dateTimeEdit.setDateTime(QtCore.QDateTime.currentDateTime().addSecs(1))
+			start_time=self.start_dateTimeEdit.dateTime()
+			self.end_dateTimeEdit.setDateTime(QtCore.QDateTime.currentDateTime().addSecs(1))
+			end_time=self.end_dateTimeEdit.dateTime()
+			return
+		period_time=self.spinBox.value()
+		#周期设定，如果周期超过时间间隔，则将周期设置为时间间隔的最大值
+		es_time=end_time.toTime_t()-start_time.toTime_t()
+		#1.如果起止时间相同，那么就采集一次2.如果起止时间小于周期时间，则将周期时间设置为起止时间
+		if es_time<=period_time*60:
+			self.spinBox.setValue((es_time/60))
+			period_time=es_time/60
+			if es_time==0:
+			#设置一个监视器 实时监视系统当前的时间，依据系统当前的时间值
+				self.period_timer=QtCore.QTimer()
+				self.period_timer.timeout.connect(lambda:self.one_task(start_time))
+			#每隔1秒监测一次
+				self.period_timer.start(1000)
+			#将起始时间和结束时间以及周期设置设置为不能使用
+				self.start_dateTimeEdit.setEnabled(False)
+				self.end_dateTimeEdit.setEnabled(False)
+				self.spinBox.setEnabled(False)
+				self.start_pushButton.setEnabled(False)
+			#采集起始和结束的时间的数据
+			else:
+				self.start_timer=QtCore.QTimer()
+				self.period_timer=QtCore.QTimer()
+				self.start_timer.timeout.connect(lambda:self.two_task(start_time))
+				self.period_timer.timeout.connect(lambda:self.one_task(end_time))
+				self.start_timer.start(1000)
+				self.period_timer.start(1000)
+				#将起始时间和结束时间以及周期设置设置为不能使用
+				self.start_dateTimeEdit.setEnabled(False)
+				self.end_dateTimeEdit.setEnabled(False)
+				self.spinBox.setEnabled(False)
+				self.start_pushButton.setEnabled(False)
+		#设置正常采集的函数
+		else:
+			#三个参数开始时间结束时间和周期
+			#如果周期为0，则默认初始化为15
+			if period_time==0:
+				period_time=15
+				self.spinBox.setValue(15)
+			self.start_timer=QtCore.QTimer()
+			self.start_timer.timeout.connect(lambda:self.three_task(start_time,end_time,period_time*1000*60))
+			self.start_timer.start(1000)
+			self.start_dateTimeEdit.setEnabled(False)
+			self.end_dateTimeEdit.setEnabled(False)
+			self.spinBox.setEnabled(False)
+			self.start_pushButton.setEnabled(False)
+	def one_task(self,time):
+		#判断当前设置的时间与系统时间值，如果相等，则读取实时数据，绘制图形和保存excel数据
+		if time.toTime_t()-QtCore.QDateTime.currentDateTime().toTime_t()==0:
+			#停止计时器
+			self.period_timer.stop()
+			#获取温度值
+			self.big_data=self.get_plot_data.getdata()
+			if len(self.big_data)==120:
+				self.small_pushButton_1.setEnabled(False)
+				self.small_pushButton_2.setEnabled(False)
+				self.small_pushButton_3.setEnabled(False)
+				self.sc.plot_figure(title='BH=2m',temp_data=self.big_data[0:40])
+			else:
+				self.big_pushButton_1.setEnabled(False)
+				self.big_pushButton_2.setEnabled(False)
+				self.big_pushButton_3.setEnabled(False)
+				self.sc.plot_small_figure(title='SH=2m',temp_data=self.big_data[0:25])
+			#保存数据到excel中
+			self.create_xls.createxls(self.big_data,time)
+			self.start_dateTimeEdit.setEnabled(True)
+			self.end_dateTimeEdit.setEnabled(True)
+			self.spinBox.setEnabled(True)
+			self.start_pushButton.setEnabled(True)
+	def two_task(self,time):
+		if time.toTime_t()-QtCore.QDateTime.currentDateTime().toTime_t()==0:
+			#停止计时器
+			self.start_timer.stop()
+			#获取温度值
+			self.big_data=self.get_plot_data.getdata()
+			if len(self.big_data)==120:
+				self.small_pushButton_1.setEnabled(False)
+				self.small_pushButton_2.setEnabled(False)
+				self.small_pushButton_3.setEnabled(False)
+				self.sc.plot_figure(title='BH=2m',temp_data=self.big_data[0:40])
+			else:
+				self.big_pushButton_1.setEnabled(False)
+				self.big_pushButton_2.setEnabled(False)
+				self.big_pushButton_3.setEnabled(False)
+				self.sc.plot_small_figure(title='SH=2m',temp_data=self.big_data[0:25])
+			#保存excel数据
+			self.create_xls.createxls(self.big_data,time)
+		#按周期采集
+	def three_task(self,start_time,end_time,period):
+		if start_time.toTime_t()-QtCore.QDateTime.currentDateTime().toTime_t()==0:
+			#停止开始计数器
+			self.start_timer.stop()
+			#开启周期定时器
+			self.period_timer=QtCore.QTimer()
+			self.period_timer.timeout.connect(lambda :self.period_task(start_time,end_time,period))
+			self.period_timer.start(period)
+			#读取温度值
+			self.big_data=self.get_plot_data.getdata()
+			if len(self.big_data)==120:
+				self.small_pushButton_1.setEnabled(False)
+				self.small_pushButton_2.setEnabled(False)
+				self.small_pushButton_3.setEnabled(False)
+				self.sc.plot_figure(title='BH=2m',temp_data=self.big_data[0:40])
+			else:
+				self.big_pushButton_1.setEnabled(False)
+				self.big_pushButton_2.setEnabled(False)
+				self.big_pushButton_3.setEnabled(False)
+				self.sc.plot_small_figure(title='SH=2m',temp_data=self.big_data[0:25])
+			#保存数据到excel中
+			self.create_xls.createxls(self.big_data,start_time)
+	def period_task(self,start_time,end_time,period):
+		#判断执行当前任务时，结束时间是否已经超时
+		current_time=start_time.addMSecs(self.task_times*period)
+		if current_time<=end_time:
+			#获取温度值
+			self.big_data=self.get_plot_data.getdata()
+			if len(self.big_data)==120:
+				self.sc.plot_figure(title='BH=2m',temp_data=self.big_data[0:40])
+			else:
+				self.sc.plot_small_figure(title='SH=2m',temp_data=self.big_data[0:25])
+			#保存数据到excel中
+			self.create_xls.createxls(self.big_data,current_time)
+			self.task_times=self.task_times+1
+			if start_time.addMSecs(self.task_times*period)>end_time:
+				self.task_times=1
+				self.period_timer.stop()
+				self.start_dateTimeEdit.setEnabled(True)
+				self.end_dateTimeEdit.setEnabled(True)
+				self.spinBox.setEnabled(True)
+				self.start_pushButton.setEnabled(True)
+		else:
+			self.task_times=1
+			self.period_timer.stop()
+			self.start_dateTimeEdit.setEnabled(True)
+			self.end_dateTimeEdit.setEnabled(True)
+			self.spinBox.setEnabled(True)
+			self.start_pushButton.setEnabled(True)
+	#重置界面，允许重新设置吧
+	def choose_plot(self,number=None):
+		if number==None:
+			#绘制第一幅图
+			if len(self.big_data[0:40])==40:
+				self.sc.plot_figure(temp_data=self.big_data[0:40],title='BH=2m')
+			else:
+				pass
+		elif number==2:
+			if len(self.big_data[40:80])==40:
+				self.sc.plot_figure(temp_data=self.big_data[40:80],title='BH=1.25m')
+			else:
+				pass
+		elif number==3:
+			if len(self.big_data[80:120])==40:
+				self.sc.plot_figure(temp_data=self.big_data[80:120],title='BH=0.5m')
+			else:
+				pass
+		elif number==4:
+			if len(self.big_data[0:25])==25:
+				self.sc.plot_small_figure(temp_data=self.low_data[0:25],title='SH=2m')
+			else:
+				pass
+		elif number==5:
+			if len(self.big_data[25:50])==25:
+				self.sc.plot_small_figure(temp_data=self.low_data[25:50],title='SH=1.25m')
+			else:
+				pass
+		else:
+			if len(self.big_data[50:75])==25:
+				self.sc.plot_small_figure(temp_data=self.low_data[50:75],title='SH=0.5m')
+			else:
+				pass
+	def reset(self):
+		#将任务次数初始化为1
+		self.task_times=1
+		if self.start_timer.isActive():
+			self.start_timer.stop()
+		if self.period_timer.isActive():
+			self.period_timer.stop()
+		self.start_dateTimeEdit.setEnabled(True)
+		self.end_dateTimeEdit.setEnabled(True)
+		self.spinBox.setEnabled(True)
+		self.start_pushButton.setEnabled(True)
+if __name__=="__main__":
+	app=QtGui.QApplication(sys.argv)
+	ui=Code_MainWindow()
+	ui.show()
+sys.exit(app.exec_())
+3.云图显示
+#__author__ = 'qianqiangV'
+#coding:utf-8
+#画布界面设计
+import numpy as np
+from scipy.interpolate import griddata
+from PyQt4 import QtCore, QtGui
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.figure import Figure
+from matplotlib import colorbar
+class MyMplCanvas(FigureCanvas):
+	def __init__(self,parent=None,width=5,height=4,dpi=100):
+		self.width=width
+		self.height=height
+		self.dpi=dpi
+		self.fig=Figure(figsize=(width,height),dpi=dpi)
+		self.axes=self.fig.add_subplot(111)
+		self.axes.hold(False)
+		self.init_figure()
+		self.FigureCanvas=FigureCanvas.__init__(self,self.fig)
+		self.setParent(parent)
+		FigureCanvas.setSizePolicy(self,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Expanding)
+		FigureCanvas.updateGeometry(self)
+	def init_figure(self):
+		z=np.array([1.9,1.8,2.0,3.0,4.0,1.9,1.8,5.0,6.0,3.2,4.0,4.1,5.2,4.7,0.3,4.2,3.8,2.5,0.9,0.7,0.3,0.1,2.7,2.8,5.4,3.2,3.1,2.8,2.6,4.5,2.4,2.3,1.8,1.6,1.4,0.5,0.9,0.8,0.4,5.5])
+		points=np.array([[5,5],[5,127.50],[5,250.0],[5,372.5],[5,495.00],[117.85,5],[117.85,127.50],[117.85,250.0],[117.85,372.5],[117.85,495.00],[230.70,5],[230.70,127.50],[230.70,250.0],[230.70,372.5],[230.70,495.00],[343.55,5],[343.55,127.50],[343.55,250.0],[343.55,372.5],[343.55,495.00],[456.40,5],[456.40,127.50],[456.40,250.0],[456.40,372.5],[456.40,495.00],[569.25,5],[569.25,127.50],[569.25,250.0],[569.25,372.5],[569.25,495.00],[682.10,5],[682.10,127.50],[682.10,250.0],[682.10,372.5],[682.10,495.00],[794.95,5],[795.95,127.50],[794.95,250.0],[794.95,372.5],[794.95,495.00]])
+		grid_x,grid_y=np.mgrid[5:794.95:2,5:495:1]
+		Z=griddata(points,z,(grid_x,grid_y),method='linear')
+		CS=self.axes.contourf(grid_x,grid_y,Z)
+		self.fig.colorbar(CS)
+		self.axes.set_title('Example Figure')
+		#colorbar1=self.fig.colorbar(CS)
+		#print isinstance(colorbar1,colorbar.Colorbar)
+	def plot_figure(self,temp_data=None,title='No Data'):
+		print len(temp_data)
+		self.fig.clf()
+		self.fig.set_dpi(self.dpi)
+		self.fig.set_figheight(3.93)
+		self.fig.set_figwidth(7.25)
+		self.axes=self.fig.add_subplot(111)
+		self.axes.hold(False)
+		if temp_data==None:
+			z=np.array([1.9,1.8,2.0,3.0,4.0,1.9,1.8,5.0,6.0,3.2,4.0,4.1,5.2,4.7,0.3,4.2,3.8,2.5,0.9,0.7,0.3,0.1,2.7,2.8,5.4,3.2,3.1,2.8,2.6,4.5,2.4,2.3,1.8,1.6,1.4,0.5,0.9,0.8,0.4,5.5])
+		else:
+			z=np.array(temp_data)
+		points=np.array([[5,5],[5,127.50],[5,250.0],[5,372.5],[5,495.00],[117.85,5],[117.85,127.50],[117.85,250.0],[117.85,372.5],[117.85,495.00],[230.70,5],[230.70,127.50],[230.70,250.0],[230.70,372.5],[230.70,495.00],[343.55,5],[343.55,127.50],[343.55,250.0],[343.55,372.5],[343.55,495.00],[456.40,5],[456.40,127.50],[456.40,250.0],[456.40,372.5],[456.40,495.00],[569.25,5],[569.25,127.50],[569.25,250.0],[569.25,372.5],[569.25,495.00],[682.10,5],[682.10,127.50],[682.10,250.0],[682.10,372.5],[682.10,495.00],[794.95,5],[795.95,127.50],[794.95,250.0],[794.95,372.5],[794.95,495.00]])
+		grid_x,grid_y=np.mgrid[5:794.95:1.6,5:495:1]
+		Z=griddata(points,z,(grid_x,grid_y),method='linear')
+		CS=self.axes.contourf(grid_x,grid_y,Z)
+		self.axes.set_title(title)
+		self.fig.colorbar(CS)
+		self.draw()
+	def plot_small_figure(self,temp_data=None,title='No Data'):
+		self.fig.clf()
+		self.fig.set_dpi(self.dpi)
+		self.fig.set_figheight(3.93)
+		self.fig.set_figwidth(7.25)
+		self.axes=self.fig.add_subplot(111)
+		self.axes.hold(False)
+		if temp_data==None:
+			z=np.array([1.9,1.8,2.0,3.0,4.0,1.9,1.8,5.0,6.0,3.2,4.0,4.1,5.2,4.7,0.3,4.2,3.8,2.5,0.9,0.7,0.3,0.1,2.7,2.8,5.4])
+		else:
+			z=np.array(temp_data)
+		points=np.array([[5,5],[5,127.5],[5,250.0],[5,372.5],[5,495.0],[142.5,5],[142.5,127.5],[142.5,250.0],[142.5,372.5],[142.5,495.0],[280.0,5],[280.0,127.5],[280.0,250.0],[280.0,372.5],[280.0,495.0],[417.5,5],[417.5,127.5],[417.5,250.0],[417.5,372.5],[417.5,495.0],[555.0,5],[555.0,127.5],[555.0,250.0],[555.0,372.5],[555.0,495]])
+		grid_x,grid_y=np.mgrid[5:555:1.12,5:495:1]
+		Z=griddata(points,z,(grid_x,grid_y),method='linear')
+		CS=self.axes.contourf(grid_x,grid_y,Z)
+		self.axes.set_title(title)
+		self.fig.colorbar(CS)
+		self.draw()
+4.串口读取
+#__author__ = 'qianqiangV'
+#coding:utf-8
+import serial,sys,binascii,struct,random
+#实现和巡检仪通讯，并且获取数据
+class Serial_Comm(object):
+	def __init__(self):
+		self.big_data=[]
+		self.send_big_code=['010400000020F1D2','010400200020F018','010400400020F006','010400600020F1CC','010400800020F03A'
+						'020400000020F1E1','020400200020F02B','020400400010F021']
+	def getdata(self):
+		self.com3_serial=serial.Serial(port=2,baudrate=9600,stopbits=1,timeout=0.05)
+		for send_code in self.send_big_code:
+			self.com3_serial.write(binascii.a2b_hex(send_code))
+			hex_data=self.com3_serial.readall()
+			for i in range(3,len(hex_data)-2,4):
+				self.big_data.append(round(struct.unpack('!f',hex_data[i:i+4])[0],2))
+		self.com3_serial.close()
+		if len(self.big_data)==120:
+			return self.big_data
+		elif len(self.big_data)==80:
+			return self.big_data[0:75]
+		else:
+			self.big_data=[]
+			for i in range(0,120):
+				self.big_data.append(random.randint(0,8)-2)
+			return self.big_data
+5.数据存储
+#__author__ = 'qianqiangV'
+#coding:utf-8
+import os
+from xlrd import *
+from xlwt import *
+from PyQt4 import QtCore
+"""将数据以xls形式保存，以日期创建文件夹，然后将具体时刻的数据，存入到xls中，
+"""
+class Create_Xls(object):
+	#将数据以xls形式保存
+	def __init__(self):
+		self.tilte=['Time','X','Y','Number','Temperature']
+		self.big_x_y=[[5,5],[5,127.50],[5,250.0],[5,372.5],[5,495.00],[117.85,5],[117.85,127.50],[117.85,250.0],[117.85,372.5],[117.85,495.00],[230.70,5],[230.70,127.50],[230.70,250.0],[230.70,372.5],[230.70,495.00],[343.55,5],[343.55,127.50],[343.55,250.0],[343.55,372.5],[343.55,495.00],[456.40,5],[456.40,127.50],[456.40,250.0],[456.40,372.5],[456.40,495.00],[569.25,5],[569.25,127.50],[569.25,250.0],[569.25,372.5],[569.25,495.00],[682.10,5],[682.10,127.50],[682.10,250.0],[682.10,372.5],[682.10,495.00],[794.95,5],[795.95,127.50],[794.95,250.0],[794.95,372.5],[794.95,495.00]]
+		self.small_x_y=[[5,5],[5,127.5],[5,250.0],[5,372.5],[5,495.0],[142.5,5],[142.5,127.5],[142.5,250.0],[142.5,372.5],[142.5,495.0],[280.0,5],[280.0,127.5],[280.0,250.0],[280.0,372.5],[280.0,495.0],[417.5,5],[417.5,127.5],[417.5,250.0],[417.5,372.5],[417.5,495.0],[555.0,5],[555.0,127.5],[555.0,250.0],[555.0,372.5],[555.0,495]]
+	#将数据写入excel表格中
+	def createxls(self,big_data,time):
+		str_time=time.toString('yyyy-MM-dd hh-mm-ss')
+		data1,data2=str_time.split(' ')
+		self.createfolder(str(data1))
+		w_xls=Workbook()
+		w_sheet=w_xls.add_sheet('sheet1')
+		for i in range(0,5):
+			w_sheet.write(0,i,self.tilte[i])
+		if len(big_data)==120:
+			for i in range(0,120):
+					w_sheet.write(i+1,0,str(str_time))
+					w_sheet.write(i+1,1,self.big_x_y[i%40][0])
+					w_sheet.write(i+1,2,self.big_x_y[i%40][1])
+					w_sheet.write(i+1,3,i+1)
+					w_sheet.write(i+1,4,big_data[i])
+		if len(big_data)==75:
+			for i in range(0,75):
+					w_sheet.write(i+1,0,str(str_time))
+					w_sheet.write(i+1,1,self.small_x_y[i%25][0])
+					w_sheet.write(i+1,2,self.small_x_y[i%25][1])
+					w_sheet.write(i+1,3,i+1)
+					w_sheet.write(i+1,4,big_data[i])
+		file='data'+'/'+data1+'/'+data2+'.xls'
+		w_xls.save(file)
+	def createfolder(self,floder):
+		#判断以日期的命名的文件夹是否存在
+		#如果不存在则建文件夹
+		data_floder='data'+'/'+floder
+		if os.path.isdir(data_floder)==False|os.path.exists(data_floder)==False:
+			os.makedirs(data_floder)
